@@ -1,10 +1,16 @@
-FROM python:3.11-slim
+FROM python:3.11
 
 WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     postgresql-client \
+    build-essential \
+    libpq-dev \
+    libssl-dev \
+    libffi-dev \
+    zlib1g-dev \
+    libjpeg-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Ensure pip is installed and upgraded
