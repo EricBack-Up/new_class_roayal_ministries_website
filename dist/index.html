@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Class Royal Ministries - API Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #4a5568;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .api-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .api-card {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .api-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .api-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .endpoint {
+            background: #2d3748;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 5px 0;
+            display: inline-block;
+        }
+        
+        .method {
+            background: #48bb78;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-right: 10px;
+        }
+        
+        .contact-info {
+            background: #667eea;
+            color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .contact-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .api-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>New Class Royal Ministries</h1>
+            <p>Called for Community Influence</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>About Our Ministry</h2>
+                <p>New Class Royal Ministries is a holistic ministry addressing the spiritual, mental, and physical well-being of individuals and communities. Founded in 2005 by Apostle Noah Mulanga, our ministry has evolved over two decades to serve communities in Zambia and beyond.</p>
+                
+                <h3>Our Mission</h3>
+                <p>Called for Community Influence through the integration of faith, mental health, community development, and education.</p>
+                
+                <h3>Key Ministries</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>REACTS Divine Ministerial College</strong> - Training over 400 ministers since 2013</li>
+                    <li><strong>Community Health Ministry</strong> - Holistic health and wellness programs</li>
+                    <li><strong>Trauma Healing & Resilience Building</strong> - Supporting communities across Zambia, USA, and Malawi</li>
+                    <li><strong>Alcohol & Drug Prevention</strong> - Community-focused prevention and rehabilitation</li>
+                    <li><strong>Global Resilience Oral Workshop (GROW)</strong> - International resilience-building initiative</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>API Documentation</h2>
+                <p>This Django-based church management system provides comprehensive REST API endpoints for managing all aspects of our ministry operations.</p>
+                
+                <div class="api-grid">
+                    <div class="api-card">
+                        <h4>Church Information</h4>
+                        <p>Access church details, contact information, and organizational data.</p>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/core/church-info/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/core/staff/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/core/ministries/
+                        </div>
+                    </div>
+                    
+                    <div class="api-card">
+                        <h4>Sermons & Teaching</h4>
+                        <p>Access our sermon library, series, and educational content.</p>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/sermons/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/sermons/series/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/sermons/featured/
+                        </div>
+                    </div>
+                    
+                    <div class="api-card">
+                        <h4>Events & Programs</h4>
+                        <p>Manage church events, training programs, and workshops.</p>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/events/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/events/upcoming/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">POST</span>/api/events/{id}/register/
+                        </div>
+                    </div>
+                    
+                    <div class="api-card">
+                        <h4>Prayer Ministry</h4>
+                        <p>Community prayer support and request management.</p>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/prayer/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">POST</span>/api/prayer/create/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">POST</span>/api/prayer/{id}/pray/
+                        </div>
+                    </div>
+                    
+                    <div class="api-card">
+                        <h4>Donations & Giving</h4>
+                        <p>Secure donation processing and campaign management.</p>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/donations/campaigns/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">POST</span>/api/donations/
+                        </div>
+                    </div>
+                    
+                    <div class="api-card">
+                        <h4>Live Streaming</h4>
+                        <p>Online service broadcasting and engagement.</p>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/livestream/current/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">GET</span>/api/livestream/upcoming/
+                        </div>
+                    </div>
+                    
+                    <div class="api-card">
+                        <h4>Newsletter</h4>
+                        <p>Community communication and updates.</p>
+                        <div class="endpoint">
+                            <span class="method">POST</span>/api/newsletter/subscribe/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">POST</span>/api/newsletter/unsubscribe/
+                        </div>
+                    </div>
+                    
+                    <div class="api-card">
+                        <h4>Authentication</h4>
+                        <p>User authentication and member management.</p>
+                        <div class="endpoint">
+                            <span class="method">POST</span>/api/auth/login/
+                        </div>
+                        <div class="endpoint">
+                            <span class="method">POST</span>/api/auth/register/
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Technical Features</h2>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Django REST Framework</strong> - Robust API development</li>
+                    <li><strong>JWT Authentication</strong> - Secure user authentication</li>
+                    <li><strong>PostgreSQL Database</strong> - Reliable data storage</li>
+                    <li><strong>Stripe Integration</strong> - Secure payment processing</li>
+                    <li><strong>AWS S3 Storage</strong> - Scalable media file storage</li>
+                    <li><strong>Email Integration</strong> - Automated communication</li>
+                    <li><strong>API Documentation</strong> - Swagger/OpenAPI documentation</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <strong>Address</strong>
+                    Lilanda West, Lusaka, Zambia
+                </div>
+                <div class="contact-item">
+                    <strong>WhatsApp</strong>
+                    +260 975 639 834<br>
+                    +260 766 496 511
+                </div>
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    newclassroyalministries@gmail.com
+                </div>
+                <div class="contact-item">
+                    <strong>Facebook</strong>
+                    New Class Royal Ministries
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 New Class Royal Ministries. Called for Community Influence.</p>
+        </div>
+    </div>
+</body>
+</html>
