@@ -7,6 +7,9 @@ RUN apt-get update && apt-get install -y \
     postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
+# Ensure pip is installed and upgraded
+RUN python -m pip install --upgrade pip
+
 # Install Python dependencies
 COPY requirements.txt .
 RUN python -m pip install --no-cache-dir -r requirements.txt
