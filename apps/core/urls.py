@@ -12,5 +12,7 @@ urlpatterns = [
     path('verse-of-the-day/', views.verse_of_the_day, name='verse-of-the-day'),
     path('contact/', views.ContactMessageCreateView.as_view(), name='contact-create'),
     path('contact/messages/', views.ContactMessageListView.as_view(), name='contact-list'),
+    path('programs/', views.ProgramListView.as_view(), name='program-list'),
+    path('programs/<int:pk>/', views.ProgramDetailView.as_view(), name='program-detail'),
     path('stats/', views.church_stats, name='church-stats'),
 ]

@@ -1,0 +1,149 @@
+[
+  {
+    "model": "core.churchinfo",
+    "pk": 1,
+    "fields": {
+      "name": "New Class Royal Ministries",
+      "tagline": "Called for Community Influence",
+      "description": "<p>New Class Royal Ministries is a holistic ministry addressing the spiritual, mental, and physical well-being of individuals and communities. Founded in 2005 by Apostle Noah Mulanga, our ministry has evolved over two decades to serve communities in Zambia and beyond.</p><p>We are committed to integrating faith, mental health, community development, and education through our various programs including REACTS Divine Ministerial College, trauma healing, and resilience building initiatives.</p><p>Our mission extends across Zambia, the USA, and Malawi, focusing on alcohol and drug prevention, trauma healing, and resilience building across various groups including sports clubs, churches, schools, and rehab centers.</p>",
+      "phone": "+260 975 639 834",
+      "phone_secondary": "+260 766 496 511",
+      "email": "newclassroyalministries@gmail.com",
+      "address": "Lilanda West, Lusaka, Zambia",
+      "facebook_url": "https://facebook.com/newclassroyalministries",
+      "instagram_url": "",
+      "youtube_url": "",
+      "twitter_url": "",
+      "whatsapp_number": "+260 975 639 834",
+      "sunday_service_time": "09:00 AM - 12:00 PM",
+      "wednesday_service_time": "06:00 PM - 08:00 PM",
+      "mission_statement": "Called for Community Influence",
+      "vision_statement": "To build resilient communities through holistic ministry that addresses spiritual, mental, and physical well-being through continuous learning, perseverance, and the integration of faith, mental health, and community development.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.staff",
+    "pk": 1,
+    "fields": {
+      "name": "Apostle Noah C. Mulanga",
+      "position": "apostle",
+      "bio": "<p><strong>Noah C. Mulanga</strong> is a prominent community leader and the founder of New Class Royal Ministries in Lusaka, Zambia. His ministry, which began unexpectedly in 2005, has evolved over two decades into a holistic approach addressing the spiritual, mental, and physical well-being of individuals and communities.</p><p>A highly qualified professional, Apostle Mulanga holds a Bachelor's Degree in Practical Ministry, an Advanced Diploma in Pastoral and Counseling Ministry, and a Diploma in Community Alcohol and Drugs Facilitation, among numerous other certifications. He is also trained in Community Health Ministry (CHM) by the Meros Center in Wisconsin, USA, and serves as an international Coach/Trainer and Cultural Consultant for the Global Resilience Oral Workshop (GROW) Ministry.</p><p>In 2013, Apostle Mulanga expanded his impact by establishing REACTS Divine Ministerial College, which has since trained over 400 ministers of the gospel from diverse Christian denominations and within his ministry.</p><p>His extensive community-based work spans Zambia, the USA, and Malawi, focusing on alcohol and drug prevention, trauma healing, and resilience building across various groups including sports clubs, churches, schools, and rehab centers. Supported by a network of over 40 trained facilitators, he actively promotes the integration of faith, mental health, and sports, notably serving on the board of directors of a sports foundation.</p><p>Apostle Mulanga's ministry reflects a steadfast pursuit of God's calling through continuous learning and perseverance.</p>",
+      "email": "apostle@newclassroyalministries.com",
+      "phone": "+260 975 639 834",
+      "qualifications": "Bachelor's Degree in Practical Ministry; Advanced Diploma in Pastoral and Counseling Ministry; Diploma in Community Alcohol and Drugs Facilitation; Community Health Ministry (CHM) Training - Meros Center, Wisconsin, USA; International Coach/Trainer Certification; Cultural Consultant Certification - Global Resilience Oral Workshop (GROW) Ministry",
+      "specializations": "Holistic Ministry; Community Health Ministry; Trauma Healing and Resilience Building; Alcohol and Drug Prevention; Pastoral Counseling; Ministerial Training; Cultural Consultation; Sports Ministry Integration; Community Development",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.ministry",
+    "pk": 1,
+    "fields": {
+      "name": "REACTS Divine Ministerial College",
+      "description": "<p>REACTS Divine Ministerial College was established in 2013 to provide comprehensive ministerial training and education. The college has successfully trained over 400 ministers of the gospel from diverse Christian denominations.</p><p>Our curriculum focuses on practical ministry, pastoral care, counseling, and community engagement. We prepare ministers to serve effectively in various contexts while maintaining biblical foundations and cultural sensitivity.</p>",
+      "ministry_type": "education",
+      "leader": 1,
+      "contact_email": "college@newclassroyalministries.com",
+      "meeting_time": "Various class schedules available",
+      "meeting_location": "Lilanda West, Lusaka, Zambia",
+      "is_active": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "core.ministry",
+    "pk": 2,
+    "fields": {
+      "name": "Community Health Ministry (CHM)",
+      "description": "<p>Our Community Health Ministry addresses the holistic well-being of individuals and communities by integrating faith, health education, and practical care.</p><p>This ministry focuses on preventive health measures, health education, and connecting community members with appropriate healthcare resources while maintaining a Christ-centered approach.</p>",
+      "ministry_type": "health",
+      "leader": 1,
+      "contact_email": "health@newclassroyalministries.com",
+      "meeting_time": "Community outreach programs scheduled regularly",
+      "meeting_location": "Various community locations",
+      "is_active": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "core.ministry",
+    "pk": 3,
+    "fields": {
+      "name": "Trauma Healing & Resilience Building",
+      "description": "<p>This specialized ministry focuses on helping individuals and communities heal from trauma while building resilience for future challenges.</p><p>Our approach combines biblical principles with proven therapeutic techniques, serving various groups including sports clubs, churches, schools, and rehabilitation centers across Zambia, USA, and Malawi.</p>",
+      "ministry_type": "counseling",
+      "leader": 1,
+      "contact_email": "healing@newclassroyalministries.com",
+      "meeting_time": "Workshops and sessions scheduled as needed",
+      "meeting_location": "Multiple locations across communities",
+      "is_active": true,
+      "order": 3
+    }
+  },
+  {
+    "model": "core.ministry",
+    "pk": 4,
+    "fields": {
+      "name": "Alcohol & Drug Prevention Ministry",
+      "description": "<p>A vital community-focused ministry dedicated to preventing alcohol and drug abuse through education, intervention, and support programs.</p><p>This ministry works with various community groups, providing education, support, and rehabilitation assistance to those affected by substance abuse.</p>",
+      "ministry_type": "community",
+      "leader": 1,
+      "contact_email": "prevention@newclassroyalministries.com",
+      "meeting_time": "Support groups and educational sessions weekly",
+      "meeting_location": "Community centers and church facilities",
+      "is_active": true,
+      "order": 4
+    }
+  },
+  {
+    "model": "core.ministry",
+    "pk": 5,
+    "fields": {
+      "name": "Global Resilience Oral Workshop (GROW)",
+      "description": "<p>An international ministry initiative focused on building resilience in communities through oral workshops and cultural consultation.</p><p>This ministry serves as a platform for sharing resilience-building techniques across different cultures and communities, with Apostle Mulanga serving as an international Coach/Trainer and Cultural Consultant.</p>",
+      "ministry_type": "training",
+      "leader": 1,
+      "contact_email": "grow@newclassroyalministries.com",
+      "meeting_time": "International workshops scheduled periodically",
+      "meeting_location": "Various international locations",
+      "is_active": true,
+      "order": 5
+    }
+  },
+  {
+    "model": "core.program",
+    "pk": 1,
+    "fields": {
+      "name": "Ministerial Training Program",
+      "description": "<p>Comprehensive training program for aspiring ministers and church leaders. This program covers practical ministry, biblical studies, pastoral care, and community engagement.</p><p>Participants receive hands-on training and mentorship to prepare them for effective ministry in diverse contexts.</p>",
+      "program_type": "training",
+      "coordinator": 1,
+      "start_date": "2024-01-15",
+      "end_date": "2024-12-15",
+      "location": "REACTS Divine Ministerial College, Lilanda West",
+      "target_audience": "Aspiring ministers, church leaders, ministry workers",
+      "capacity": 50,
+      "registration_required": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.program",
+    "pk": 2,
+    "fields": {
+      "name": "Community Resilience Workshop",
+      "description": "<p>Interactive workshops designed to build resilience in communities facing various challenges including trauma, substance abuse, and social issues.</p><p>These workshops combine biblical principles with practical resilience-building techniques.</p>",
+      "program_type": "workshop",
+      "coordinator": 1,
+      "start_date": "2024-02-01",
+      "end_date": "2024-11-30",
+      "location": "Various community locations",
+      "target_audience": "Community members, church groups, organizations",
+      "capacity": 30,
+      "registration_required": true,
+      "is_active": true
+    }
+  }
+]

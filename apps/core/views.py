@@ -9,11 +9,11 @@ from django.utils import timezone
 from django.core.mail import send_mail
 from django.conf import settings
 
-from .models import ChurchInfo, Staff, Ministry, Announcement, VerseOfTheDay, ContactMessage
+from .models import ChurchInfo, Staff, Ministry, Announcement, VerseOfTheDay, ContactMessage, Program
 from .serializers import (
     ChurchInfoSerializer, StaffSerializer, MinistrySerializer,
     AnnouncementSerializer, VerseOfTheDaySerializer, ContactMessageSerializer,
-    ContactMessageCreateSerializer
+    ContactMessageCreateSerializer, ProgramSerializer
 )
 
 
@@ -99,17 +99,23 @@ class ContactMessageCreateView(generics.CreateAPIView):
             send_mail(
                 subject=f'New Contact Message: {message.subject}',
                 message=f'''
-                New contact message received:
+                New contact message received from New Class Royal Ministries website:
                 
                 Name: {message.name}
                 Email: {message.email}
                 Phone: {message.phone}
                 Subject: {message.subject}
+                Message Type: {message.get_message_type_display()}
                 
                 Message:
                 {message.message}
                 
                 Received at: {message.created_at}
+                
+                Please respond promptly to serve our community effectively.
+                
+                Blessings,
+                New Class Royal Ministries Website System
                 ''',
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 recipient_list=[settings.DEFAULT_FROM_EMAIL],
@@ -134,6 +140,24 @@ class ContactMessageListView(generics.ListAPIView):
         return ContactMessage.objects.none()
 
 
+class ProgramListView(generics.ListAPIView):
+    """
+    List all active programs.
+    """
+    queryset = Program.objects.filter(is_active=True)
+    serializer_class = ProgramSerializer
+    permission_classes = [AllowAny]
+
+
+class ProgramDetailView(generics.RetrieveAPIView):
+    """
+    Get program details.
+    """
+    queryset = Program.objects.filter(is_active=True)
+    serializer_class = ProgramSerializer
+    permission_classes = [AllowAny]
+
+
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def church_stats(request):
@@ -148,5 +172,7 @@ def church_stats(request):
             start_date__lte=timezone.now(),
             end_date__gte=timezone.now()
         ).count(),
+        'active_programs': Program.objects.filter(is_active=True).count(),
+        'ministry_types': Ministry.objects.filter(is_active=True).values_list('ministry_type', flat=True).distinct().count(),
     }
     return Response(stats)
