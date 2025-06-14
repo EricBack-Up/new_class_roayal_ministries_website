@@ -9,7 +9,7 @@ import Footer from './components/layout/Footer'
 // Pages
 import Home from './pages/Home'
 import About from './pages/About'
-import Ministries from './pages/Ministries.jsx'
+import Ministries from './pages/Ministries'
 import Sermons from './pages/Sermons'
 import SermonDetail from './pages/SermonDetail'
 import Events from './pages/Events'
