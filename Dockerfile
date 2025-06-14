@@ -11,6 +11,11 @@ RUN apt-get update && apt-get install -y \
     libffi-dev \
     zlib1g-dev \
     libjpeg-dev \
+    python3-dev \
+    libbz2-dev \
+    liblzma-dev \
+    libreadline-dev \
+    libncurses-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Ensure pip is installed and upgraded
